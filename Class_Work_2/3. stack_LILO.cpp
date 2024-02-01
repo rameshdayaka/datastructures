@@ -7,7 +7,7 @@ using namespace std;
 int main() {
     // Creating a stack of integers
     stack<int> stack;
-
+//
     // Pushing elements onto the stack
     stack.push(21);
     stack.push(22);

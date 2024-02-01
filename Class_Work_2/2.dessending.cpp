@@ -4,7 +4,7 @@
 using namespace std;
 
 int main() {
-    // Initializing an array
+    // Initializing an array//
     int a[] = {8, 7, 6, 5, 2, 4, 1, 3, 9};
     
     // Calculating the length of the array
