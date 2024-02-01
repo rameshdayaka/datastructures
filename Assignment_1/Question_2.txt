@@ -1,5 +1,5 @@
 /*
- Tracing the bubble sort algorithm step by step for the unsorted array[7, 4, 2, 9, 1]:
+   Tracing the bubble sort algorithm step by step for the unsorted array[7, 4, 2, 9, 1]:
 
 2. Intermediate: Trace the Bubble Sort
 

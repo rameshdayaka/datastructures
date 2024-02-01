@@ -7,7 +7,7 @@ using namespace std;
 void bubbleSort(int arr[], int size) {
     // Outer loop: Iterate through the array from the beginning to the second-to-last element.
     for (int i = 0; i < size - 1; ++i) {
-        // Inner loop: Iterate through the array from the beginning to the (size - i - 1) element.
+        // // Inner loop: Iterate through the array from the beginning to the (size - i - 1) element.
         for (int j = 0; j < size - i - 1; ++j) {
             // Check if the current element is greater than the next element.
             if (arr[j] > arr[j + 1]) {
