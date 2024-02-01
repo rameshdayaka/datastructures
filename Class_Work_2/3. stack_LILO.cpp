@@ -1,4 +1,4 @@
-// Online C++ compiler to run C++ program onlines
+//Online C++ compiler to run C++ program onlines
 
 #include <iostream>
 #include <stack>

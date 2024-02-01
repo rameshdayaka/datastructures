@@ -18,7 +18,7 @@ void showQueue(queue<int> gq) {
     }
     cout << '\n';
 }
-//
+
 // Driver Code
 int main() {
     // Creating a queue named 'gquiz'
