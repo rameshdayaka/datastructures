@@ -1,4 +1,4 @@
-//  Include the input/output stream header file for basic input and output operations.
+// Include the input/output stream header file for basic input and output operations.
 #include <iostream>
 // Use the standard namespace to simplify the use of standard library components.
 using namespace std;
