@@ -1,4 +1,4 @@
-5.Advanced: Comparison with Other Sorting Algorithms
+5. Advanced: Comparison with Other Sorting Algorithms
 
 Bubble Sort :
 
