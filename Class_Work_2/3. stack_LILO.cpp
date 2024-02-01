@@ -1,8 +1,8 @@
-// Online C++ compiler to run C++ program online
+// Online C++ compiler to run C++ program onlines
 
 #include <iostream>
 #include <stack>
-using namespace std;//
+using namespace std;
 
 int main() {
     // Creating a stack of integers
