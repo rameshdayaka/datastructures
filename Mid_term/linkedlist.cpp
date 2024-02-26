@@ -1,38 +1,64 @@
-class Node:
-    def __init__(self, data):
-        self.data = data
-        self.next = None
+#include <iostream>
+#include <string>
+using namespace std;
 
-class LinkedList:
-    def __init__(self):
-        self.head = None
+// Define a class for the nodes in the linked list
+class Node {
+public:
+    string data;
+    Node* next;
 
-    def append(self, data):
-        new_node = Node(data)
-        if not self.head:
-            self.head = new_node
-            return
-        last_node = self.head
-        while last_node.next:
-            last_node = last_node.next
-        last_node.next = new_node
+    Node(string d) : data(d), next(nullptr) {}
+};
 
-    def print_list(self):
-        current_node = self.head
-        while current_node:
-            print(current_node.data, end=" ")
-            current_node = current_node.next
-        print()
+// Define a class for the linked list
+class LinkedList {
+public:
+    Node* head;
 
-def create_linked_list(size):
-    linked_list = LinkedList()
-    for i in range(size):
-        data = input("Enter data for node {}: ".format(i + 1))
-        linked_list.append(data)
-    return linked_list
+    LinkedList() : head(nullptr) {}
 
-if __name__ == "__main__":
-    size = int(input("Enter the size of the linked list: "))
-    linked_list = create_linked_list(size)
-    print("Linked List:")
-    linked_list.print_list()
+    void append(string data) {
+        Node* new_node = new Node(data);
+        if (!head) {
+            head = new_node;
+            return;
+        }
+        Node* last_node = head;
+        while (last_node->next) {
+            last_node = last_node->next;
+        }
+        last_node->next = new_node;
+    }
+
+    void print_list() {
+        Node* current_node = head;
+        while (current_node) {
+            cout << current_node->data << " ";
+            current_node = current_node->next;
+        }
+        cout << endl;
+    }
+};
+
+LinkedList create_linked_list(int size) {
+    LinkedList linked_list;
+    for (int i = 0; i < size; ++i) {
+        string data;
+        cout << "Enter data for node " << i + 1 << ": ";
+        cin >> data;
+        linked_list.append(data);
+    }
+    return linked_list;
+}
+
+int main() {
+    int size;
+    cout << "Enter the size of the linked list: ";
+    cin >> size;
+    LinkedList linked_list = create_linked_list(size);
+    cout << "Linked List:" << endl;
+    linked_list.print_list();
+
+    return 0;
+}
