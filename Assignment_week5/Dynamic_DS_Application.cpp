@@ -147,10 +147,12 @@ private:
     };
 
     TreeNode* root; // Pointer to the root of the binary tree
+    vector<int> elements; // Vector to store inserted elements
 
     // Private method to insert data into the binary tree
     TreeNode* insertNode(TreeNode* node, int value) {
         if (!node) { // If the current node is nullptr
+            elements.push_back(value); // Store the inserted value
             return new TreeNode(value); // Create a new node with the given data
         }
         if (value < node->data) { // If the data is less than the current node's data
@@ -184,6 +186,15 @@ public:
         inorderTraversal(root); // Call the private inorder traversal method to display the binary tree
         cout << endl; // New line after displaying all elements
     }
+
+    // Method to display inserted elements
+    void displayInsertedElements() {
+        cout << "Inserted Elements: ";
+        for (int element : elements) {
+            cout << element << " ";
+        }
+        cout << endl;
+    }
 };
 
 // Main function to interact with the user and test the data structures
@@ -203,7 +214,8 @@ int main() {
         cout << "3. Stack" << endl; // Option to work with stack
         cout << "4. Queue" << endl; // Option to work with queue
         cout << "5. Binary Tree" << endl; // Option to work with binary tree
-        cout << "6. Exit" << endl; // Option to exit the application
+        cout << "6. Display Inserted Elements for All" << endl; // Option to display inserted elements
+        cout << "7. Exit" << endl; // Option to exit the application
 
         int choice; // Variable to store user's choice
         cout << "Enter your choice: "; // Prompt the user to enter their choice
@@ -250,14 +262,21 @@ int main() {
                 cout << "Value inserted into the binary tree!" << endl; // Message indicating successful insertion
                 break; // Exit the switch statement
             }
-            case 6: { // If user chooses to exit the application
-                cout << "Exiting the program." << endl; // Message indicating program exit
-                return 0; // Return 0 to indicate successful termination of the program
+            case 6: { // If user chooses to display inserted elements
+                dynamicArray.displayData(); // Display inserted elements of dynamic array
+                linkedList.displayData(); // Display inserted elements of linked list
+                customStack.displayData(); // Display inserted elements of stack
+                customQueue.displayData(); // Display inserted elements of queue
+                binaryTree.displayInsertedElements(); // Display inserted elements of binary tree
+                break; // Exit the switch statement
             }
+            case 7: // If user chooses to exit the application
+                cout << "Exiting the program. Goodbye!" << endl; // Farewell message
+                return 0; // Return 0 to indicate successful program termination
             default: // If user enters an invalid choice
-                cout << "Invalid choice! Please choose again." << endl; // Message indicating invalid choice
+                cout << "Invalid choice! Please enter a number from 1 to 7." << endl; // Error message
         }
     }
 
-    return 0; // Return 0 to indicate successful termination of the program
+    return 0; // Return 0 to indicate successful program termination
 }
